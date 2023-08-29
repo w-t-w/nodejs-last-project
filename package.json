@@ -1,0 +1,21 @@
+{
+  "name": "nodejs-last-project",
+  "version": "0.0.1",
+  "description": "nodejs project",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [
+    "nodejs"
+  ],
+  "repository": "git@github-w-t-w:w-t-w/nodejs-last-project.git",
+  "author": "wtw",
+  "license": "MIT",
+  "devDependencies": {
+    "@types/node": "^20.5.7",
+    "babel-cli": "^6.26.0",
+    "babel-core": "^6.26.3",
+    "babel-preset-env": "^1.7.0"
+  }
+}
