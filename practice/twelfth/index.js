@@ -18,7 +18,6 @@ const server = http.createServer((req, res) => {
     if (pathname === '/favicon.ico') {
         res.writeHead(200);
         res.end();
-        return true;
     }
     if (pathname === '/game') {
         if (playerCount >= 3 || sameCount === 9) {
