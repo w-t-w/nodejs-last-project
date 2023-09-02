@@ -4,7 +4,7 @@ const path = require('path');
 const koaMount = require('koa-mount');
 const koaStatic = require('koa-static');
 
-const PORT = 7777;
+const PORT = 9999;
 
 const app = new koa();
 
@@ -17,10 +17,13 @@ app.use(koaMount('/favicon.ico', ctx => {
     return true;
 }));
 
+const buffer = fs.readFileSync(path.resolve(__dirname, './source/index.html'));
+
 app.use(koaMount('/', ctx => {
     const {response} = ctx;
     response.status = 200;
-    response.body = fs.readFileSync(path.resolve(__dirname, './source/index.html'), 'utf-8');
+    response.type = 'html';
+    response.body = buffer;
 }));
 
 app.listen(PORT, () => {
